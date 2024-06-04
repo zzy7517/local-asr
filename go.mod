@@ -1,4 +1,4 @@
-module github.com/zzy7517/local-asr/proto
+module github.com/zzy7517/local-asr
 
 go 1.13
 
