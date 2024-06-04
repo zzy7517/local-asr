@@ -1,6 +1,6 @@
 module github.com/zzy7517/local-asr/proto
 
-go 1.21
+go 1.18
 
 require (
 	github.com/golang/protobuf v1.5.3
