@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+service AudioStreamService {
+    rpc StreamAudio (stream AudioChunk) returns (RecognitionResult);
+}
+
+message AudioChunk {
+    bytes data = 1;
+    int32 sample_rate = 2;
+}
+
+message RecognitionResult {
+    string result = 1;
+}
