@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bproto/audio_streaming.proto\x12\x05proto\"/\n\nAudioChunk\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x13\n\x0bsample_rate\x18\x02 \x01(\x05\"#\n\x11RecognitionResult\x12\x0e\n\x06result\x18\x01 \x01(\t2R\n\x12\x41udioStreamService\x12<\n\x0bStreamAudio\x12\x11.proto.AudioChunk\x1a\x18.proto.RecognitionResult(\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bproto/audio_streaming.proto\x12\x05proto\"/\n\nAudioChunk\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x13\n\x0bsample_rate\x18\x02 \x01(\x05\"#\n\x11RecognitionResult\x12\x0e\n\x06result\x18\x01 \x01(\t2T\n\x12\x41udioStreamService\x12>\n\x0bStreamAudio\x12\x11.proto.AudioChunk\x1a\x18.proto.RecognitionResult(\x01\x30\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -26,5 +26,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_RECOGNITIONRESULT']._serialized_start=87
   _globals['_RECOGNITIONRESULT']._serialized_end=122
   _globals['_AUDIOSTREAMSERVICE']._serialized_start=124
-  _globals['_AUDIOSTREAMSERVICE']._serialized_end=206
+  _globals['_AUDIOSTREAMSERVICE']._serialized_end=208
 # @@protoc_insertion_point(module_scope)

@@ -39,7 +39,7 @@ class AudioStreamServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.StreamAudio = channel.stream_unary(
+        self.StreamAudio = channel.stream_stream(
                 '/proto.AudioStreamService/StreamAudio',
                 request_serializer=proto_dot_audio__streaming__pb2.AudioChunk.SerializeToString,
                 response_deserializer=proto_dot_audio__streaming__pb2.RecognitionResult.FromString,
@@ -58,7 +58,7 @@ class AudioStreamServiceServicer(object):
 
 def add_AudioStreamServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'StreamAudio': grpc.stream_unary_rpc_method_handler(
+            'StreamAudio': grpc.stream_stream_rpc_method_handler(
                     servicer.StreamAudio,
                     request_deserializer=proto_dot_audio__streaming__pb2.AudioChunk.FromString,
                     response_serializer=proto_dot_audio__streaming__pb2.RecognitionResult.SerializeToString,
@@ -85,7 +85,7 @@ class AudioStreamService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(
+        return grpc.experimental.stream_stream(
             request_iterator,
             target,
             '/proto.AudioStreamService/StreamAudio',
