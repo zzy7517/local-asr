@@ -13,4 +13,5 @@ message AudioChunk {
 
 message RecognitionResult {
     string result = 1;
+    bool finished = 2;
 }
