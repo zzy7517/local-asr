@@ -1,4 +1,4 @@
-module proto
+module github.com/zzy7517/local-asr/proto
 
 go 1.21
 
