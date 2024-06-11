@@ -15,4 +15,5 @@ message AudioChunk {
 message RecognitionResult {
     string result = 1;
     bool finished = 2;
+    int64 asr_time_cost = 3;
 }
