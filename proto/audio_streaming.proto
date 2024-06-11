@@ -9,6 +9,7 @@ service AudioStreamService {
 message AudioChunk {
     bytes data = 1;
     int32 sample_rate = 2;
+    bool send_finished = 3;
 }
 
 message RecognitionResult {
